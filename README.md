@@ -156,40 +156,34 @@ category/subcategory/fields data depends on user choices
 ```
 
 returned data : 
-```
+```python
 {
 
 'data' : {
 
-‘user’:user id,
-
-category:category id,
-
-fields: product fields, {
-  for example :
-  'title': 'product 1',
-  'price': '100',
-  etc...
-}
-
-status: product status , by default its ‘approved’
-
-expire_date: product expire date,
-
-subcategory: subcategory id,
-
-photos: {
-'image 1 name' : 'image 1 url',
-'image 2 name' : 'image 2 url'
-etc....
-}},
+	‘user’:user id,
+	'category':category id,
+	'fields': 'product fields', # {
+	  # for example :
+	  # 'title': 'product 1',
+	  # 'price': '100',
+	  # etc...
+	# }
+	'status': 'product status' ,# by default its ‘approved’
+	'expire_date': 'product expire date',
+	'subcategory': 'subcategory id',
+	'photos': {
+	'image 1 name' : 'image 1 url',
+	'image 2 name' : 'image 2 url'
+	# etc....
+	}},
 
 'errorPhotos':{
-Object,
-photos that rejected
+	# Object,
+	# photos that rejected
 
-'image name': image,
-etc...
+	'image name': image,
+	#etc...
 }}
 ```
 
