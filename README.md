@@ -9,7 +9,7 @@ just in case :
 
 2- +962786923387
 
-let's start:
+# let's start:
 
 for use the api u need few things to understand first
 
@@ -85,6 +85,13 @@ class About(models.Model):
 its so easy to read
 and u can check every table and its fields and data type
 —--------------------------------
+
+6- when add new product the fields that the user gonna fill
+
+have to be dynamic!
+
+you gonna see that in this docs
+
 
 # 1- products endpoints:
 -------------------------------
