@@ -369,8 +369,11 @@ normal product data + status updated
 
 
 8- update product expire date
+
 every single product has a expire_date
+
 when current date >= expire_date
+
 the user have to update his product expire date
 
 to do it :
@@ -380,16 +383,38 @@ method : POST
 endpoint : /product/update/expire/
 
 data to post :
-
+```
 {
 'api_key': api key,
 'product': product id
 }
-
+```
 returned data :
+```
 {
 'updated': prodcut new expire date!
 }
+```
+
+9- get product comments
+
+method : GET
+
+endpoint : /product/get/comments/
+
+query params : 'product' : product id,
+
+returned data :
+```
+[
+{
+'user': user id , the user who create this product,
+'description': the context,
+'product': product id
+},
+etc....
+]
+```
 
 # 2- category endpoints 
 
@@ -629,3 +654,52 @@ lets say the admin dont want 'payment_info_link'
 the value gonna be then '1'
 1 = null
 anything here its value is '1' that means Null
+
+# comments
+
+1- create new comment :
+
+method : PUT
+
+endpoint : /comment/
+
+data to post :
+
+```
+{
+'user': user id,
+'description': comment context,
+'product': product id,
+}
+```
+
+returned data :
+```
+{
+'user': user id,
+'description': comment context,
+'product': product id,
+}
+```
+
+2- delete comment : 
+
+method : DELETE
+
+endpoint : /comment/
+data to post :
+```
+{
+'comment': comment id
+}
+```
+
+returned data : 
+```
+{
+'deleted'
+}
+```
+
+# ERRORS :
+
