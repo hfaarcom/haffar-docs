@@ -371,6 +371,7 @@ normal product data + status updated
 }
 
 
+
 8- update product expire date
 
 every single product has a expire_date
@@ -399,6 +400,7 @@ returned data :
 }
 ```
 
+
 9- get product comments
 
 method : GET
@@ -418,6 +420,83 @@ returned data :
 etc....
 ]
 ```
+
+
+10- update product photos  (under test)
+-be careful here-
+
+method : PUT
+
+endpoint : /product/update/photos/
+
+data to post :
+```
+{
+'product':product id,
+'photos': Object with photo name as Key, the image it self as value
+}
+```
+
+example for photos object: 
+
+```python
+'photos': {
+	'image1':image.png,
+	'image2':anotherimage.png,
+	# etc...
+	}
+```
+
+
+returned data :
+
+```python
+{
+'putPhotos': photosDict # => photos that successfully stored -approved- , Object
+'errorPhotos': errorPhotos # => photos that has errors -rejected- , Object
+}
+```
+
+
+
+11 - delete product photos (under test) :
+
+-be careful here-
+
+method : DELETE
+
+endpoint : /product/update/photos/
+
+data to post : 
+
+```
+{
+'product': product id,
+'photos': list of photos names that u want to delete !!
+}
+```
+
+-- photos value type have to be LIST! --
+
+example of photos LIST: 
+
+```python
+[
+'image1.png',
+'image2.png'
+# etc...
+]
+```
+
+returned data : 
+
+```
+{
+'deletedPhotos': deletedPhotos, # => deleted photos Names -approved- , List
+'errorPhotos': errorPhotos # =>  photos that has errors -rejected- , Object
+}
+```
+
 
 # 2- category endpoints 
 
@@ -666,7 +745,7 @@ anything here its value is '1' that means Null
 
 method : PUT
 
-endpoint : /comment/
+endpoint : /product/comment/
 
 data to post :
 
@@ -691,7 +770,7 @@ returned data :
 
 method : DELETE
 
-endpoint : /comment/
+endpoint : /product/comment/
 data to post :
 ```
 {
