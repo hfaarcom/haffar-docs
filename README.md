@@ -6,6 +6,7 @@ let's start:
 for use the api u need few things to understand first
 
 1- the api key
+
 some endpoints needs api_key to access to it
 
 2- only allowed methods are POST, GET only
@@ -13,9 +14,10 @@ some endpoints needs api_key to access to it
 3- in this docs i'm gonna mention every end point + its details
 
 4- in error case the returned data gonna be like:
+
 {‘error’: Error Line}
 
-5- data fields if u want u can check it :
+5- database fields if u want u can check it :
 ```python
 class Product(models.Model):
     date = models.DateField(null=True, blank=True, auto_now_add=True)
