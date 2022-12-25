@@ -156,7 +156,7 @@ category/subcategory/fields data depends on user choices
 ```
 
 returned data : 
-
+```
 {
 
 'data' : {
@@ -182,29 +182,22 @@ photos: {
 'image 1 name' : 'image 1 url',
 'image 2 name' : 'image 2 url'
 etc....
-}
-},
+}},
 
-}
+'errorPhotos':{
+Object,
+photos that rejected
 
-
-possible errors:
-
-{'error': 'Product Fields Does not match with its category'}
-	in this case u have to check product fields keys that u post, it has to match the category fields keys that given
-
-```python 
-    fields = data[‘fields’]
-    category = Category.objects.get(id=data[‘category’])
-    # convert STR to DICT/JSON
-    Jfields = json.loads(fields)
- 
-    # check Product Fields
-    if Jfields.keys() == category.fields.keys():
-	do some stuff
-    else:
-	return {{'error': 'Product Fields Does not match with its category'}}
+'image name': image,
+etc...
+}}
 ```
+
+two main Keys in return Data: 
+
+1-  data
+
+2-  errorPhotos
 
 ------------------------------------
 
@@ -732,6 +725,21 @@ to solve it check the data u have posted
 to solve this just check the api key
 
 3- ```{'error': 'Product Fields Does not match with its category'}```
+
+the code :
+
+```python 
+    fields = data[‘fields’]
+    category = Category.objects.get(id=data[‘category’])
+    # convert STR to DICT/JSON
+    Jfields = json.loads(fields)
+ 
+    # check Product Fields
+    if Jfields.keys() == category.fields.keys():
+	do some stuff
+    else:
+	return {{'error': 'Product Fields Does not match with its category'}}
+```
 
 in this case the products fields u have sent are not match with its category 
 
