@@ -444,6 +444,8 @@ etc....
 
 method : GET,
 
+endpoint : 
+
 query params : 'api_key' ,    'category': category id
 
 returned data : 
@@ -703,3 +705,28 @@ returned data :
 
 # ERRORS :
 
+1- ``` {'error': 'bad request'} ```
+
+this error appreas when the given data dont match with the required data
+
+to solve it check the data u have posted
+
+2- ```{'error': 'bad API_KEY'}```
+
+to solve this just check the api key
+
+3- ```{'error': 'Product Fields Does not match with its category'}```
+
+in this case the products fields u have sent are not match with its category 
+
+to solve this :
+
+1- check category fields -endpoint : /category/get/fields/-
+
+2- check the given product fields
+
+the keys have to be matched
+
+4- -Username or Password are wrong-, -Username doesnt exists-
+
+it depends on auth, user bad input
