@@ -391,7 +391,114 @@ returned data :
 'updated': prodcut new expire date!
 }
 
-# 2- User Authencation
+# 2- category endpoints 
+
+1- get all categories :
+
+many = True
+
+method : GET
+
+query params : api_key
+
+returned data :
+```
+[
+{
+'name':category name,
+'photo': category photo link,
+'status': category status, # always 'appear'
+'fields' : category fields  , Object
+},
+etc....
+]
+```
+
+
+2- get category fields -!- :
+
+method : GET,
+
+query params : 'api_key' ,    'category': category id
+
+returned data : 
+```
+{
+category fields
+}
+
+# example : 
+{
+'title': 'required',
+'price': 'required',
+'address': 'required'
+}
+
+# always the value for every key is  : 'required'
+# its just initial value doesnt make ant sense! 
+```
+
+3- get specific category data :
+
+many = False
+
+method : GET
+
+query params : 'api_key',  'category': category id
+
+endpoit : /category/get/id/
+
+returned data : 
+```
+{
+'name': category name,
+'photo': category photo link,
+'status': 'approved',
+'fields' : Object
+}
+```
+
+
+# 3- Sub Categories endpoint
+
+1- get all subcategories 
+
+method : GET
+
+query params : api_key,
+
+endpoint : /category/sub/get/all/
+
+returned data : 
+```
+[
+{
+'mainCategory': main category id ,
+'name': sub category name,
+'photo': sub category photo
+}
+etc...
+]
+```
+
+2- get specific sub category data :
+
+method : GET
+
+endpoint : /category/sub/get/id/
+
+query params : 'api_key' , 'subcategory' : subcategory id,
+
+returned data : 
+```
+{
+'mainCategory': main category id ,
+'name': sub category name,
+'photo': sub category photo
+}
+```
+
+# 4- User Authencation
 
 1- login : 
 
@@ -490,7 +597,7 @@ returned data :
 }
 ```
 
-# 3- about 
+# 5- about 
 
 to get about app data :
 
