@@ -1,6 +1,14 @@
 # haffar-docs
 hello world!
 
+# whatsapp numbers:
+
+1- +962788855956
+
+just in case : 
+
+2- +962786923387
+
 let's start:
 
 for use the api u need few things to understand first
