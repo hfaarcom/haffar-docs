@@ -308,6 +308,7 @@ list with all products with that subcategory
 ```
 
 5- get product data by product id
+
 method : GET
 
 endpoint : /product/get/id/
