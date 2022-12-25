@@ -122,9 +122,9 @@ you gonna see that in this docs
 photos object have to be like this :
 ```
 {
-'image 1 name' : image,
-'image 2 name' : image,
-etc...
+	'image 1 name' : image,
+	'image 2 name' : image,
+	# etc...
 }
 ```
 ```
@@ -138,9 +138,9 @@ image name have to be :
 example:
 
 'photos' : {
-'productId-1.png': screensho1.png,
-'productId-2.png': sfsdf.png,
-'productId-3.png': sdffds.png,
+	'productId-1.png': screensho1.png,
+	'productId-2.png': sfsdf.png,
+	'productId-3.png': sdffds.png,
 }
 ```
 
@@ -161,7 +161,7 @@ returned data :
 
 'data' : {
 
-	‘user’:user id,
+	'user':user id,
 	'category':category id,
 	'fields': 'product fields', # {
 	  # for example :
@@ -173,9 +173,9 @@ returned data :
 	'expire_date': 'product expire date',
 	'subcategory': 'subcategory id',
 	'photos': {
-	'image 1 name' : 'image 1 url',
-	'image 2 name' : 'image 2 url'
-	# etc....
+		'image 1 name' : 'image 1 url',
+		'image 2 name' : 'image 2 url'
+		# etc....
 	}},
 
 'errorPhotos':{
@@ -187,7 +187,7 @@ returned data :
 }}
 ```
 
-two main Keys in return Data: 
+- note : two main Keys in returned Data: 
 
 1-  data
 
