@@ -785,6 +785,40 @@ returned data :
 }
 ```
 
+# ADS - free banner -
+
+1- get all ads
+
+method : POST
+
+endpoint : /ads/
+
+data to post : 
+
+```
+{
+'api_key': api key only,
+}
+```
+
+returned data : 
+```python
+[
+	{
+		'name': 'ad name ',
+		'status': 'ad status',
+		'photo': 'ad photo link',
+		'date': 'creation date',
+		'expire_date' : 'ad expire date',
+		'contact': 'ad contact number',
+	},
+	# etc...
+]
+```
+
+-returned data type : List-
+
+
 # ERRORS :
 
 1- ``` {'error': 'bad request'} ```
