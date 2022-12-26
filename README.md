@@ -735,8 +735,11 @@ returned data :
 
 - note :
 lets say the admin dont want 'payment_info_link'
+
 the value gonna be then '1'
+
 1 = null
+
 anything here its value is '1' that means Null
 
 # comments
