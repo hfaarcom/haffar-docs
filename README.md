@@ -100,7 +100,7 @@ you gonna see that in this docs
 
 	- method : POST
 	
-	- endpoint : /products/create/
+	- endpoint : /product/create/
 
 	- data to post : 
 	
