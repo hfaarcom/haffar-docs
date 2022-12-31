@@ -106,7 +106,7 @@ you gonna see that in this docs
 	
 	{
 	
-	- ‘user’: user id, Int
+	- ‘user’: user token,
 	
 	- ‘category’ : category id, Int
 	
@@ -206,8 +206,8 @@ required query params :
 
 {
 
-‘user’:’user id’, 
-‘status’:’product status’
+'user':'user token', 
+'status':'product status'
 
 }
 
@@ -423,6 +423,7 @@ etc....
 
 
 10- update product photos  (under test)
+
 -be careful here-
 
 method : PUT
@@ -705,6 +706,32 @@ returned data :
 'contact': user.contact, 
 }
 ```
+
+4- get User Token
+
+method : POST
+
+endpoint : /token
+
+data to post :
+
+```
+{
+'username':username,
+'password': password
+}
+```
+returned data : 
+
+```
+{
+'refresh': Refresh Token,
+'access' : Accress Toekn,
+}
+```
+
+note - Access Token expire data : 100 weeks
+nore - Refresh Token expire date : 1 day
 
 # 5- about 
 
