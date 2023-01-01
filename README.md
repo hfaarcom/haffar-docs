@@ -203,13 +203,15 @@ returned data :
 endpoint : /product/get/user/,
 
 required query params : 
-
+```
 {
 
 'user':'user token', 
+
 'status':'product status'
 
 }
+```
 
 product status have to be one of these:
 
