@@ -237,8 +237,9 @@ if data['status'] != 'all':
 else:
   products = Product.objects.filter(user=data['user'])
 ```
-
+--
 returned data :
+```
 {
 
 date: product created date,
@@ -257,7 +258,7 @@ fields : product fields , OBJECT!
 
 }
 
-
+```
 3- get products by specific category 
 
 method : GET
