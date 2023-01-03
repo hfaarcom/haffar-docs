@@ -822,11 +822,11 @@ returned data :
 
 1- get all ads
 
-method : POST
+method : GET
 
 endpoint : /ads/
 
-data to post : 
+query params : 
 
 ```
 {
