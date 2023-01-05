@@ -737,6 +737,27 @@ returned data :
 note - Access Token expire data : 100 weeks
 nore - Refresh Token expire date : 1 day
 
+
+5- Get User Details
+
+endpoint : user/get/details
+
+method : GET
+
+query params : user token
+
+returned data :
+
+```
+{
+	'username': user.username,
+	'name': user.first_name,
+	'contact': user.contact,
+	'user': user.id,
+	'token': token
+}
+```
+
 # 5- about 
 
 to get about app data :
