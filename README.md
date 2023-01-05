@@ -349,13 +349,12 @@ method : POST
 endpoint : /product/update/status/
 
 data to post :
-
+```
 {
 'status': new product status,
-'api_key': api key,
 'product': prooduct Id
 }
-
+```
 -note- :
 
 product status : 
