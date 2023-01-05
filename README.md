@@ -507,6 +507,8 @@ returned data :
 
 many = True
 
+endpoint : category/get/all
+
 method : GET
 
 query params : api_key
@@ -529,7 +531,7 @@ etc....
 
 method : GET,
 
-endpoint : 
+endpoint : category/get/fields
 
 query params : 'api_key' ,    'category': category id
 
