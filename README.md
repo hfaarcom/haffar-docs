@@ -417,7 +417,8 @@ returned data :
 {
 'user': user id , the user who create this product,
 'description': the context,
-'product': product id
+'product': product idو
+'id': comment id
 },
 etc....
 ]
@@ -809,6 +810,7 @@ data to post :
 'token': user token,
 'description': comment context,
 'product': product id,
+'id': comment id,
 }
 ```
 
@@ -818,6 +820,7 @@ returned data :
 'user': user id,
 'description': comment context,
 'product': product id,
+'id': comment id ,
 }
 ```
 
