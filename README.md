@@ -800,13 +800,13 @@ anything here its value is '1' that means Null
 
 method : PUT
 
-endpoint : /product/comment/
+endpoint : /product/comment
 
 data to post :
 
 ```
 {
-'user': user id,
+'token': user token,
 'description': comment context,
 'product': product id,
 }
