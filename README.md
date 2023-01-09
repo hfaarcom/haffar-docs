@@ -843,6 +843,47 @@ returned data :
 }
 ```
 
+# Replaies
+
+-1 create new replay:
+
+endpoint : product/comment/replay
+
+method : PUT
+
+data to post: 
+
+```
+{
+'user': user token,
+'product': product id,
+'comment': comment id,
+'description': description
+}
+```
+returned data : 
+
+{
+
+normal comment data
+
+}
+
+
+2- delete replay 
+
+method : DELETE
+
+endpoint : product/comment/replay
+
+data to post :
+
+```
+{
+'replay': replay id
+}
+```
+
 # ADS - free banner -
 
 1- get all ads
