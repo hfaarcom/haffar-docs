@@ -682,11 +682,8 @@ returned data :
 }
 ```
 
-3- update user
+3- update user data
 
-user can only update his password by knowing his old password
-
-to -reset password- he have to contact with admin to reset it
 
 method : POST
 
@@ -695,20 +692,49 @@ endpoint : /user/update/
 data to post : 
 ```
 {
-'username': user -username-,
-'oldpassword': user oldpassword,
-'newpassword': newpassword
+'email',
+'contact',
+'name', 
+'user'
 }
 ```
 
 returned data : 
 ```
 {
-'user': user.id,
+'user': user token,
 'username': user.username, 
 'email': user.email, 
 'name': user.name, 
 'contact': user.contact, 
+}
+```
+
+- update password 
+
+
+user can only update his password by knowing his old password
+
+to -reset password- he have to contact with admin to reset it'
+
+endpoint : /user/change/password
+
+method : post
+
+data to post :
+
+```
+{
+	'username', 
+	'oldpassword', 
+	'newpassword'
+}
+```
+
+returned data :
+```
+{
+normal user data
 }
 ```
 
