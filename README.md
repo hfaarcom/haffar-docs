@@ -944,6 +944,92 @@ returned data :
 -returned data type : List-
 
 
+
+# Notification
+
+1- create new Notification
+
+endpoint : user/notifications
+
+method : POST
+
+data to post : 
+
+```
+{
+'user': user Token,
+'body': notification text
+}
+```
+
+retured data : 
+```
+{
+'user': user details,
+'body': notification text,
+'date': date,
+'id': notification id
+}
+```
+
+
+2- delete notification 
+
+method : DELETE
+
+endpoint : user/notifications
+
+data to post : 
+
+
+delete specific notification :
+
+```
+{
+'id' : notification,
+}
+```
+
+clear all user notidication : 
+
+```
+{
+'user':user Token
+}
+```
+
+returned data :
+
+```
+{'deleted'}
+```
+
+3- get user notification
+
+method : GET
+
+query params : 
+```
+{
+'user': user Token
+}
+```
+
+returned data :
+
+```
+
+[
+	'user': user details,
+	'body': notification text,
+	'date': date,
+	'id': notification id
+	},
+	# ... etc
+]
+
+```
+
 # ERRORS :
 
 1- ``` {'error': 'bad request'} ```
